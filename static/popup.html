@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tabs and Saved Sessions</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./styles.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <div class="tabs-list">
+          <button
+            class="tabs-trigger"
+            data-target="tabs"
+          >
+            Tabs
+          </button>
+          <button
+            class="tabs-trigger"
+            data-target="sessions"
+          >
+            Saved Sessions
+          </button>
+        </div>
+        <div
+          class="tabs-content"
+          id="tabs"
+        >
+          <div class="content">
+            <div class="header">
+              <h2>Active Tabs</h2>
+              <div class="buttons">
+                <button
+                  class="btn"
+                  id="close-all"
+                >
+                  Close All
+                </button>
+                <button
+                  class="btn"
+                  id="close-right"
+                >
+                  Close to Right
+                </button>
+                <button
+                  class="btn"
+                  id="close-left"
+                >
+                  Close to Left
+                </button>
+              </div>
+            </div>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>URL</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="tab-list">
+                  <!-- Dynamic content goes here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tabs-content"
+          id="sessions"
+          style="display: none"
+        >
+          <div class="content">
+            <div class="header">
+              <h2>Saved Sessions</h2>
+              <div class="buttons">
+                <!-- <input
+                  type="text"
+                  class="input"
+                  placeholder="Search sessions..."
+                /> -->
+                <button
+                  class="btn"
+                  id="save-session"
+                >
+                  Save Current Session
+                </button>
+                <input
+                  type="file"
+                  id="import-session"
+                  style="display: none"
+                />
+                <button
+                  class="btn"
+                  id="import-session-button"
+                >
+                  Import Session
+                </button>
+              </div>
+            </div>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Tabs</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="session-list">
+                  <!-- Dynamic content goes here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    type="module"
+    src="../scripts/popop.js"
+  ></script>
+</html>
